@@ -611,7 +611,8 @@ for an element's width and height */
         0 8px 8px rgba(0, 0, 0, 0.12),
         0 16px 16px rgba(0, 0, 0, 0.12);
     /* paddings */
-    --button-padding: 15px 8px;
+    --button-padding: 36px;
+    --icon-padding: 10px;
 }
 
 body {
@@ -654,4 +655,43 @@ main,
     margin: 0 auto;
     display: flex;
     flex-flow: column;
+}
+
+
+
+/*
+  ==============================================================================
+  Top navigation
+  ==============================================================================
+*/
+
+.main-nav {
+    display: none;
+    width: 100%;
+    background-color: var(--white-bg);
+}
+
+/* toggle class on click */
+.active {
+    display: flex;
+    position: absolute;
+    top: 60px;
+
+}
+
+.main-nav li {
+    display: block;
+    width: 100%;
+    border-top: var(--thin-dark-border);
+}
+
+.main-nav li a {
+    display: block;
+    width: 80%;
+    height: 42px;
+    margin: 0 auto;
+    color: var(--dark-txt);
+    font-family: var(--title-font);
+    text-decoration: none;
+    line-height: 250%;
 }
