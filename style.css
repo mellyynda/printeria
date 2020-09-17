@@ -653,18 +653,27 @@ main,
     width: 100%;
     max-width: 1500px;
     margin: 0 auto;
-    display: flex;
-    flex-flow: column;
 }
 
 
 
 /*
   ==============================================================================
-  Top navigation
+  Top navigation bar
   ==============================================================================
 */
+/* navbar container and items alignment
+  ==============================================================================
+  */
+.flex-cont {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
+/* dropdown nav links
+  ==============================================================================
+  */
 .main-nav {
     display: none;
     width: 100%;
@@ -674,24 +683,65 @@ main,
 /* toggle class on click */
 .active {
     display: flex;
-    position: absolute;
-    top: 60px;
-
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    top: auto;
 }
 
+
+
 .main-nav li {
-    display: block;
-    width: 100%;
+    flex: 0 0 340px;
     border-top: var(--thin-dark-border);
+}
+
+@media screen and (min-width: 1022px) {
+    .active {
+        flex-wrap: nowrap;
+    }
+
+    .main-nav li {
+        flex-basis: 25%;
+    }
 }
 
 .main-nav li a {
     display: block;
-    width: 80%;
-    height: 42px;
-    margin: 0 auto;
+    padding: 15px;
     color: var(--dark-txt);
     font-family: var(--title-font);
     text-decoration: none;
-    line-height: 250%;
+}
+
+
+
+/*
+  ==============================================================================
+  Typography
+  ==============================================================================
+*/
+h1,
+h2 {
+    font-family: var(--title-font);
+    font-size: var(--title-size);
+}
+
+
+
+/*
+  ==============================================================================
+  Components
+  ==============================================================================
+*/
+.logo {
+    width: 50px;
+}
+
+.logo svg {
+    fill: var(--dark-bg);
+}
+
+.brand {
+    display: none;
 }
