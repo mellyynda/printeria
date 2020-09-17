@@ -614,6 +614,16 @@ for an element's width and height */
     --button-padding: 15px 8px;
 }
 
+body {
+    color: var(--dark-txt);
+    font-size: var(--text-size);
+    /* the math behind: [minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
+    font-family: var(--text-font);
+    font-style: normal;
+    line-height: 180%;
+}
+
+
 
 /*
   ==============================================================================
