@@ -611,7 +611,7 @@ for an element's width and height */
         0 8px 8px rgba(0, 0, 0, 0.12),
         0 16px 16px rgba(0, 0, 0, 0.12);
     /* paddings */
-    --button-padding: 36px;
+    --button-padding: 15px;
     --icon-padding: 10px;
 }
 
@@ -667,11 +667,39 @@ main,
   */
 .flex-cont {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 85px;
+    max-width: 100vw;
+}
+
+/* nav toggle and logo alignment and style */
+.half {
+    display: inline-flex;
+    flex-grow: 1;
+    flex-basis: 170px;
+    align-items: center;
+    justify-content: flex-start;
     align-items: center;
 }
 
-/* dropdown nav links
+.half:last-child {
+    justify-content: flex-end;
+}
+
+.search {
+    order: 3;
+    flex-grow: 2;
+    text-align: center;
+}
+
+@media screen and (min-width:623px) {
+    .search {
+        order: initial;
+    }
+}
+
+/* dropdown nav links alignment
   ==============================================================================
   */
 .main-nav {
@@ -689,8 +717,6 @@ main,
     top: auto;
 }
 
-
-
 .main-nav li {
     flex: 0 0 340px;
     border-top: var(--thin-dark-border);
@@ -706,12 +732,41 @@ main,
     }
 }
 
+/* Navbar components
+  ==============================================================================
+  */
+/* nav links */
+header a {
+    display: block;
+}
+
+.menu-toggle {
+    font-size: 40px;
+}
+
+.brand {
+    display: none;
+    font-size: 25px;
+}
+
 .main-nav li a {
     display: block;
-    padding: 15px;
+    padding: var(--button-padding);
     color: var(--dark-txt);
     font-family: var(--title-font);
     text-decoration: none;
+}
+
+.logo,
+.login,
+.cart {
+    height: 40px;
+}
+
+.logo svg,
+.login svg,
+.cart svg {
+    fill: var(--dark-txt);
 }
 
 
@@ -734,14 +789,3 @@ h2 {
   Components
   ==============================================================================
 */
-.logo {
-    width: 50px;
-}
-
-.logo svg {
-    fill: var(--dark-bg);
-}
-
-.brand {
-    display: none;
-}
