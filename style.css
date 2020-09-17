@@ -624,6 +624,16 @@ body {
     line-height: 180%;
 }
 
+header,
+footer {
+    background: var(--dark-bg);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, var(--blue-bg), var(--dark-bg));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, var(--blue-bg), var(--dark-bg));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 
 
 /*
@@ -705,7 +715,6 @@ main,
 .main-nav {
     display: none;
     width: 100%;
-    background-color: var(--white-bg);
 }
 
 /* toggle class on click */
@@ -719,7 +728,7 @@ main,
 
 .main-nav li {
     flex: 0 0 340px;
-    border-top: var(--thin-dark-border);
+    border-top: var(--thin-yellow-border);
 }
 
 @media screen and (min-width: 1022px) {
@@ -752,21 +761,55 @@ header a {
 .main-nav li a {
     display: block;
     padding: var(--button-padding);
-    color: var(--dark-txt);
-    font-family: var(--title-font);
+    color: var(--white-txt);
+    font-family: var(--text-font);
     text-decoration: none;
 }
 
 .logo,
 .login,
-.cart {
-    height: 40px;
+.cart,
+.hamburger {
+    height: 60px;
+    padding: var(--icon-padding);
 }
 
-.logo svg,
+.logo svg {
+    fill: var(--yellow-txt);
+}
+
+.hamburger svg,
+.menu-toggle,
 .login svg,
 .cart svg {
-    fill: var(--dark-txt);
+    fill: var(--white-txt);
+    color: var(--white-txt);
+}
+
+.search {
+    padding: var(--icon-padding);
+}
+
+.searchTerm {
+    width: calc(100% - 50px);
+    height: 36px;
+    border: 3px solid var(--yellow-bg);
+    border-right: none;
+    padding: 5px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: var(--dark-txt);
+}
+
+.searchButton {
+    width: 40px;
+    height: 36px;
+    border: 1px solid var(--yellow-bg);
+    background: var(--yellow-bg);
+    text-align: center;
+    color: var(--dark-txt);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
 }
 
 
@@ -786,6 +829,6 @@ h2 {
 
 /*
   ==============================================================================
-  Components
+  Footer
   ==============================================================================
 */
