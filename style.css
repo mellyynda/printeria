@@ -699,7 +699,7 @@ main,
 
 .search {
     order: 3;
-    flex-grow: 2;
+    flex-grow: 3;
     text-align: center;
 }
 
@@ -749,8 +749,8 @@ header a {
     display: block;
 }
 
-.menu-toggle {
-    font-size: 40px;
+.x-none {
+    display: none;
 }
 
 .brand {

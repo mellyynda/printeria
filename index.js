@@ -1,21 +1,28 @@
 function menuButtonEffects() {
-    var navBarToggle = document.getElementById('js-navbar-toggle');
-    var clickCount = 0;
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+    let hamburger = document.getElementById('burger');
+    let x = document.getElementById('x');
+    let clickCount = 0;
 
+    console.log(hamburger);
+    console.log(x);
 
     navBarToggle.addEventListener('click', function () {
         clickCount++;
         if (clickCount % 2 == 0) {
-            navBarToggle.innerHTML = '&#9776;';
+            hamburger.style.display = 'block';
+            x.style.display = 'none';
+
         } else {
-            navBarToggle.innerHTML = '&#10006;';
+            hamburger.style.display = 'none';
+            x.style.display = 'block';
         }
     });
 };
 
 function openMobileNav() {
-    var mainNav = document.getElementById('js-menu');
-    var navBarToggle = document.getElementById('js-navbar-toggle');
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
 
     navBarToggle.addEventListener('click', function () {
 
