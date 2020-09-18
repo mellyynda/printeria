@@ -541,24 +541,6 @@ template {
 
 /*
   ==============================================================================
-  Temporary borders
-  ==============================================================================
-*/
-header,
-main,
-footer {
-    border: 1px solid blue;
-}
-
-section {
-    border: 1px solid red;
-    border-collapse: collapse;
-}
-
-
-
-/*
-  ==============================================================================
   Custom styles
   ==============================================================================
 */
@@ -583,6 +565,8 @@ for an element's width and height */
     --dark-bg: #001033;
     --blue-txt: #0048e8;
     --blue-bg: #0048e8;
+    --green-bg: #99c9b0;
+    --green-txt: #99c9b0;
     /* font */
     --title-font: 'Fredoka One', monospace;
     --text-font: 'Varela Round', sans-serif;
@@ -754,19 +738,10 @@ header a {
     display: block;
 }
 
-header a,
-.social a {
-    line-height: 0;
-}
-
 .x-none {
     display: none;
 }
 
-.brand {
-    display: none;
-    font-size: 25px;
-}
 
 .main-nav li a {
     display: block;
@@ -774,6 +749,11 @@ header a,
     color: var(--white-txt);
     font-family: var(--text-font);
     text-decoration: none;
+}
+
+.logo img {
+    width: 100%;
+    border-radius: 8px;
 }
 
 .logo,
@@ -784,7 +764,15 @@ header a,
     padding: var(--icon-padding);
 }
 
+.brand {
+    color: var(--green-txt);
+    font-size: 2rem;
+    display: none;
+
+}
+
 .logo svg {
+    display: none;
     fill: var(--yellow-txt);
 }
 
@@ -803,7 +791,7 @@ header a,
 .searchTerm {
     width: calc(100% - 50px);
     height: 36px;
-    border: 3px solid var(--yellow-bg);
+    border: 3px solid var(--green-bg);
     border-right: none;
     padding: 5px;
     border-radius: 5px 0 0 5px;
@@ -814,8 +802,8 @@ header a,
 .searchButton {
     width: 40px;
     height: 36px;
-    border: 1px solid var(--yellow-bg);
-    background: var(--yellow-bg);
+    border: 1px solid var(--green-bg);
+    background: var(--green-bg);
     text-align: center;
     color: var(--dark-txt);
     border-radius: 0 5px 5px 0;
@@ -854,7 +842,7 @@ h2 {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-start;
+    align-items: ;
 }
 
 .cover h2 {
@@ -862,18 +850,27 @@ h2 {
     line-height: 100%;
     padding: var(--txt-padding);
     background-color: rgba(224, 173, 52, .4);
-    border-radius: 5%;
+    /* border-radius: 5%; */
+}
+
+.cover h2 a {
+    text-decoration: none;
+    color: var(--white-txt);
 }
 
 .social {
     display: inline-flex;
     justify-content: space-evenly;
-    width: 100%;
 }
 
 .social a {
     padding-top: var(--icon-padding);
     padding-bottom: var(--icon-padding);
+    line-height: 0;
+}
+
+.social a img {
+    border-radius: 10px;
 }
 
 /*
