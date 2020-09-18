@@ -687,7 +687,7 @@ main,
 .half {
     display: inline-flex;
     flex-grow: 1;
-    flex-basis: 170px;
+    flex-basis: 175px;
     align-items: center;
     justify-content: flex-start;
     align-items: center;
@@ -703,7 +703,7 @@ main,
     text-align: center;
 }
 
-@media screen and (min-width:623px) {
+@media screen and (min-width:628px) {
     .search {
         order: initial;
     }
