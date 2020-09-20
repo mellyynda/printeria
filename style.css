@@ -646,9 +646,12 @@ footer {
 /* keeps content centered on screens larger then 1500px */
 main,
 .wide {
-    width: 100%;
     max-width: 1500px;
     margin: 0 auto;
+}
+
+.wide {
+    width: 95%;
 }
 
 
