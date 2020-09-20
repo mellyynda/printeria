@@ -744,12 +744,11 @@ header a {
     border-top: var(--yellow-border);
 }
 
-.logo img {
+/* .logo img {
     width: 100%;
     border-radius: 8px;
-}
+} */
 
-.logo,
 .login,
 .cart,
 .hamburger {
@@ -757,16 +756,16 @@ header a {
     padding: var(--icon-padding);
 }
 
-.brand {
-    color: var(--green-txt);
-    font-size: 2rem;
-    display: none;
-
+.logo a {
+    text-decoration: none;
 }
 
-.logo svg {
-    display: none;
-    fill: var(--yellow-txt);
+.brand {
+    font-size: 2rem;
+    background: linear-gradient(to right bottom, var(--yellow-txt), var(--white-txt));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    padding: var(--txt-padding);
 }
 
 .hamburger svg,
