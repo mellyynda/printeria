@@ -562,10 +562,10 @@ for an element's width and height */
     --white-txt: #fdfef6;
     --white-bg: #fdfef6;
     --dark-txt: #001033;
-    --dark-bg: #001033;
+    --dark-bg: #0c1f22;
     --blue-txt: #0048e8;
-    --blue-bg: #0048e8;
-    --green-bg: #99c9b0;
+    --blue-bg: #286671;
+    --green-bg: #10A12C;
     --green-txt: #99c9b0;
     /* font */
     --title-font: 'Fredoka One', monospace;
@@ -598,6 +598,7 @@ for an element's width and height */
     --button-padding: 15px;
     --icon-padding: 10px;
     --txt-padding: 15px;
+    --img-padding: 40px;
 }
 
 body {
@@ -686,6 +687,8 @@ main,
     order: 3;
     flex-grow: 3;
     text-align: center;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (min-width:624px) {
@@ -791,7 +794,7 @@ header a {
 .searchTerm {
     width: calc(100% - 50px);
     height: 36px;
-    border: 3px solid var(--green-bg);
+    border: 3px solid#dedede;
     border-right: none;
     padding: 5px;
     border-radius: 5px 0 0 5px;
@@ -802,8 +805,8 @@ header a {
 .searchButton {
     width: 40px;
     height: 36px;
-    border: 1px solid var(--green-bg);
-    background: var(--green-bg);
+    border: 1px solid#dedede;
+    background: #dedede;
     text-align: center;
     color: var(--dark-txt);
     border-radius: 0 5px 5px 0;
@@ -871,6 +874,32 @@ h2 {
 
 .social a img {
     border-radius: 10px;
+    width: 30px;
+    transition: all .2s linear;
+}
+
+.social a img:hover,
+.social a img:active,
+.social a img:focus {
+    position: relative;
+    top: -2px;
+}
+
+
+/*
+  ==============================================================================
+  Offers section
+  ==============================================================================
+*/
+.card {
+    width: 70%;
+    margin: 0 auto;
+    padding: var(--img-padding);
+}
+
+.card img {
+    width: 100%;
+    box-shadow: var(--shadow);
 }
 
 /*
