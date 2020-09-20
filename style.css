@@ -597,7 +597,7 @@ for an element's width and height */
     /* paddings */
     --button-padding: 15px;
     --icon-padding: 10px;
-    --txt-padding: 15px;
+    --txt-padding: 5px;
     --img-padding: 40px;
 }
 
@@ -720,17 +720,6 @@ main,
 
 .main-nav li {
     flex: 0 0 340px;
-    border-top: var(--thin-yellow-border);
-}
-
-@media screen and (min-width: 1022px) {
-    .active {
-        flex-wrap: nowrap;
-    }
-
-    .main-nav li {
-        flex-basis: 25%;
-    }
 }
 
 /* Navbar components
@@ -752,6 +741,7 @@ header a {
     color: var(--white-txt);
     font-family: var(--text-font);
     text-decoration: none;
+    border-top: var(--yellow-border);
 }
 
 .logo img {
@@ -811,6 +801,28 @@ header a {
     color: var(--dark-txt);
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+}
+
+@media screen and (min-width: 1020px) {
+    .main-nav {
+        display: flex;
+    }
+
+    .active {
+        flex-wrap: nowrap;
+    }
+
+    .main-nav li {
+        flex-basis: 25%;
+    }
+
+    .main-nav li a {
+        padding: var(--txt-padding);
+    }
+
+    .hamburger {
+        display: none;
+    }
 }
 
 
