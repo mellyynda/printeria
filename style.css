@@ -676,10 +676,8 @@ main,
 .half {
     display: inline-flex;
     flex-grow: 1;
-    flex-basis: 173px;
     align-items: center;
     justify-content: flex-start;
-    align-items: center;
 }
 
 .half:last-child {
@@ -694,7 +692,7 @@ main,
     justify-content: center;
 }
 
-@media screen and (min-width:624px) {
+@media screen and (min-width:621px) {
     .flex-cont {
         flex-wrap: nowrap;
     }
