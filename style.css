@@ -857,6 +857,10 @@ h2 {
     font-size: var(--title-size);
 }
 
+h3 {
+    padding: var(--txt-padding);
+}
+
 .section-title {
     text-align: center;
     line-height: 180%;
@@ -1028,7 +1032,42 @@ p {
         margin-right: 1%;
     }
 
-    /*
+}
+
+/*
+  ==============================================================================
+  Articles section
+  ==============================================================================
+*/
+/* grid
+  ==============================================================================
+  */
+.flexcontainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.flexcontainer article {
+    width: 80%;
+    max-width: 250px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.roundimg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.flexcontainer article a {
+    text-decoration: none;
+    color: var(--dark-txt);
+}
+
+
+
+/*
   ==============================================================================
   Footer
   ==============================================================================
