@@ -590,10 +590,10 @@ html::-webkit-scrollbar {
     --dark-border: 1px solid #001033;
     --thin-yellow-border: .5px solid #E0AD34;
     --yellow-border: 1px solid #E0AD34;
-    --thin-blue-border: .5px solid #0048e8;
-    --blue-border: 1px solid #0048e8;
-    --thin-white-border: .5px solid #fdfef6;
-    --white-border: 1px solid #fdfef6;
+    --thin-blue-border: .5px solid #286671;
+    --blue-border: 1px solid #286671;
+    --thin-gray-border: .5px solid #7e979c;
+    --gray-border: 1px solid #7e979c;
     /* font size */
     /* the math behind: [minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); */
     --txt-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1500 - 300)));
@@ -613,7 +613,8 @@ html::-webkit-scrollbar {
     --button-padding: 15px;
     --icon-padding: 10px;
     --txt-padding: 5px;
-    --img-padding: 40px;
+    --img-padding: 15px;
+    --title-padding: 15px;
     /* rating stars */
     --star-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1500 - 300)));
     --star-color: #fff;
@@ -627,6 +628,7 @@ body {
     font-family: var(--text-font);
     font-style: normal;
     line-height: 180%;
+    background-color: var(--white-bg);
 }
 
 header,
@@ -864,6 +866,7 @@ h3 {
 .section-title {
     text-align: center;
     line-height: 180%;
+    padding: var(--title-padding);
 }
 
 p {
@@ -1046,6 +1049,9 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    background-color: #fff;
+    border: var(--thin-gray-border);
+    padding: var(--title-padding);
 }
 
 .flexcontainer article {
@@ -1058,11 +1064,14 @@ p {
 .roundimg img {
     width: 100%;
     border-radius: 50%;
+    padding: var(--img-padding);
+    padding-top: 0;
 }
 
 .flexcontainer article a {
     text-decoration: none;
     color: var(--dark-txt);
+    font-family: var(--title-font);
 }
 
 
