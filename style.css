@@ -570,17 +570,18 @@ html::-webkit-scrollbar {
 
 /* main variables are used in order to be able to quickly change styles if needed or in case of rebranding */
 :root {
-    /* text and background color */
+    /* text color  */
     --yellow-txt: #E0AD34;
-    --yellow-bg: #E0AD34;
     --white-txt: #fdfef6;
-    --white-bg: #fdfef6;
     --dark-txt: #001033;
-    --dark-bg: #0c1f22;
-    --blue-txt: #0048e8;
-    --blue-bg: #286671;
-    --green-bg: #10A12C;
+    --blue-txt: #286671;
     --green-txt: #99c9b0;
+    /* background color */
+    --yellow-bg: #E0AD34;
+    --white-bg: #fdfef6;
+    --dark-bg: #0c1f22;
+    --blue-bg: #286671;
+    --green-bg: #99c9b0;
     /* font */
     --title-font: 'Fredoka One', monospace;
     --text-font: 'Varela Round', sans-serif;
@@ -613,6 +614,10 @@ html::-webkit-scrollbar {
     --icon-padding: 10px;
     --txt-padding: 5px;
     --img-padding: 40px;
+    /* rating stars */
+    --star-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1500 - 300)));
+    --star-color: #fff;
+    --star-background: #fc0;
 }
 
 body {
@@ -857,6 +862,10 @@ h2 {
     line-height: 180%;
 }
 
+p {
+    font-weight: var(--txt-size);
+}
+
 
 
 /*
@@ -940,6 +949,9 @@ h2 {
   My products section
   ==============================================================================
 */
+/* products style and alignment
+  ==============================================================================
+  */
 .products img {
     width: 100%;
 }
@@ -950,10 +962,49 @@ h2 {
     margin: 0 auto;
 }
 
+
+
+/* product components and alignment
+  ==============================================================================
+  */
+.pricebox-wrapper {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: -70px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+/* cart wrapper */
 .buy {
     height: 60px;
     padding: var(--icon-padding);
 }
+
+/* review stars */
+.stars {
+    --percent: calc(var(--rating) / 5 * 100%);
+    display: inline-block;
+    font-size: var(--star-size);
+    font-family: Times; // make sure ★ appears correctly
+    line-height: 1;
+}
+
+.stars::before {
+    content: '★★★★★';
+    letter-spacing: 3px;
+    background: linear-gradient(90deg, var(--star-background) var(--percent), var(--star-color) var(--percent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* price */
+.price {
+    font-size: var(--title-size);
+}
+
 
 /*
   ==============================================================================
