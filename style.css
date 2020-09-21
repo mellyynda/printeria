@@ -962,9 +962,7 @@ p {
     margin: 0 auto;
 }
 
-
-
-/* product components and alignment
+/* components style and alignment
   ==============================================================================
   */
 .pricebox-wrapper {
@@ -1006,8 +1004,30 @@ p {
     font-size: var(--title-size);
 }
 
+/* big screen product alignment
+  ==============================================================================
+  */
+@media screen and (min-width:768px) {
 
-/*
+    .cardwrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    .smallcard {
+        width: 98.6%;
+    }
+
+    .group-of-2,
+    .bigcard {
+        flex-basis: 50%;
+    }
+
+    .group-of-2 {
+        margin-right: 1%;
+    }
+
+    /*
   ==============================================================================
   Footer
   ==============================================================================
