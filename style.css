@@ -972,10 +972,11 @@ p {
     justify-content: space-between;
     position: relative;
     top: -70px;
+    overflow: visible;
+    height: 0;
     width: 90%;
     margin: 0 auto;
 }
-
 
 /* cart wrapper */
 .buy {
