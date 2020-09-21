@@ -960,6 +960,7 @@ p {
 .bigcard {
     width: 80%;
     margin: 0 auto;
+    position: relative;
 }
 
 /* components style and alignment
@@ -968,13 +969,13 @@ p {
 .pricebox-wrapper {
     display: flex;
     justify-content: space-between;
-    position: relative;
-    top: -70px;
-    overflow: visible;
-    height: 0;
+    position: absolute;
+    bottom: 10px;
+    left: 5%;
     width: 90%;
     margin: 0 auto;
 }
+
 
 /* cart wrapper */
 .buy {
