@@ -554,6 +554,12 @@ for an element's width and height */
     box-sizing: border-box;
 }
 
+/* styles the tab navigation link and buttons outline */
+*:focus {
+    outline: thin dotted;
+}
+
+
 /* ======= Hide scrollbar ====== */
 html {
     /* Hide scrollbar for IE, Edge and Firefox */
@@ -1198,4 +1204,38 @@ input[type="tel"]:focus,
 
 .members button svg {
     display: inline-block;
+}
+
+/* footer links
+  ==============================================================================
+*/
+.footer-nav ul {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    justify-content: space-around;
+}
+
+.footer-nav li {
+    padding: var(--button-padding);
+    border-bottom: var(--thin-yellow-border);
+}
+
+.footer-nav li a {
+    text-decoration: none;
+    color: var(--white-txt);
+    white-space: nowrap;
+}
+
+.footer-nav li a:focus {
+    color: var(--yellow-txt);
+}
+
+@media screen and (min-width:642px) {
+    .footer-nav ul {
+        flex-direction: row;
+    }
 }
