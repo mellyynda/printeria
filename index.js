@@ -24,7 +24,7 @@
 
      navBarToggle.addEventListener('click', function () {
 
-         mainNav.classList.toggle('active-nav');
+         mainNav.classList.toggle('active');
      });
  };
 

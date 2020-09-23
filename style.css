@@ -891,6 +891,7 @@ p {
 */
 .cover {
     min-height: 500px;
+    max-height: 800px;
     background-color: var(--yellow-bg);
     background-image: url(img/fun-at-the-sea-with-my-custom-tshirt.png);
     background-position: center center;
@@ -901,20 +902,23 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: space-around;
 }
 
 .cover h2 {
-    color: var(--white-txt);
     line-height: 100%;
     padding: var(--txt-padding);
-    background-color: rgba(224, 173, 52, .4);
-    /* border-radius: 5%; */
+    background-color: rgba(126, 151, 156, .4);
+    border-radius: 5px;
+    align-self: flex-start;
+    margin: 0 0 20px 5%;
+    text-align: center;
 }
 
 .cover h2 a {
     text-decoration: none;
-    color: var(--white-txt);
+    color: var(--dark-txt);
+    font-size: var(--txt-big);
+    line-height: 110%;
 }
 
 .social {
@@ -950,13 +954,13 @@ p {
 .offers {
     display: flex;
     overflow-x: auto;
-    width: 70%;
+    width: 100%;
     margin: 50px auto 0 auto;
 }
 
 .card {
     width: 100%;
-    min-width: 300px;
+    min-width: 250px;
     max-width: 550px;
     margin: 0 auto;
 }
