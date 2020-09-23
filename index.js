@@ -22,22 +22,55 @@
 
      navBarToggle.addEventListener('click', function () {
 
-         mainNav.classList.toggle('active');
+         mainNav.classList.toggle('active-nav');
      });
  };
 
  menuButtonEffects();
  openMobileNav();
 
- let positionOfferCards = function () {
-     let cardsContainer = document.querySelector('.offers');
-     let cards = document.querySelectorAll('.card');
-     let screenWidth = window.innerWidth;
+ //  let positionOfferCards = function () {
+ //      let cardsContainer = document.querySelector('.offers');
+
+ //      let screenWidth = window.innerWidth;
 
 
-     if (screenWidth == 800 || screenWidth >= 1200) {
-         cardsContainer.style.marginTop = "0";
-     } else cardsContainer.style.marginTop = "50px";
+ //      if (screenWidth == 800 || screenWidth >= 1200) {
+ //          cardsContainer.style.marginTop = "0";
+ //      } else cardsContainer.style.marginTop = "50px";
+ //  }
+
+ //  positionOfferCards();
+
+ let slideIndex = 1;
+ showSlides(slideIndex);
+
+ // Next/previous controls
+ function plusSlides(n) {
+     showSlides(slideIndex += n);
  }
 
- positionOfferCards();
+ // Thumbnail image controls
+ function currentSlide(n) {
+     showSlides(slideIndex = n);
+ }
+
+ function showSlides(n) {
+     let i;
+     let slides = document.getElementsByClassName("mySlides");
+     let dots = document.getElementsByClassName("dot");
+     if (n > slides.length) {
+         slideIndex = 1
+     }
+     if (n < 1) {
+         slideIndex = slides.length
+     }
+     for (i = 0; i < slides.length; i++) {
+         slides[i].style.display = "none";
+     }
+     for (i = 0; i < dots.length; i++) {
+         dots[i].className = dots[i].className.replace(" on-dot", "");
+     }
+     slides[slideIndex - 1].style.display = "block";
+     dots[slideIndex - 1].className += " on-dot";
+ }

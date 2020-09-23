@@ -949,16 +949,15 @@ p {
 */
 .offers {
     display: flex;
-    overflow: hidden;
-    background-position: center;
-    flex-wrap: wrap;
-    margin: 50px 0;
+    overflow-x: auto;
+    width: 70%;
+    margin: 50px auto 0 auto;
 }
 
 .card {
-    width: 90%;
+    width: 100%;
     min-width: 300px;
-    max-width: 400px;
+    max-width: 550px;
     margin: 0 auto;
 }
 
@@ -966,6 +965,97 @@ p {
     width: 100%;
     box-shadow: var(--shadow);
 }
+
+/* carousell
+  ==============================================================================
+  */
+/* Slideshow container */
+.slideshow-container {
+    max-width: 550px;
+    position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: var(--dark-txt);
+    background-color: rgba(153, 201, 176, 0.4);
+    font-weight: bold;
+    font-size: var(--txt-size);
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(153, 201, 176, 0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.on-dot,
+.dot:hover {
+    background-color: #4d4d4d;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+
 
 
 /*
