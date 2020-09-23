@@ -17,6 +17,22 @@
      });
  };
 
+ //  margin top resize function 
+ // let positionOfferCards = function () {
+ //      let cardsContainer = document.querySelector('.offers');
+ //      let cards = document.querySelectorAll('.card');
+ //      let screenWidth = window.innerWidth;
+ //      console.log(cardsContainer);
+ //      console.log(cards);
+ //      console.log(screenWidth);
+
+ //      if (screenWidth = 800) {
+ //          cardsContainer.style.marginTop = "0";
+ //      } else cardsContainer.style.marginTop = "50px";
+ //  }
+
+ //  positionOfferCards();
+
  // opens main nav
  function openMobileNav() {
      let mainNav = document.getElementById('js-menu');
