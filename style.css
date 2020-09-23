@@ -1162,7 +1162,7 @@ p {
     flex-wrap: wrap;
     align-items: center;
     background-color: #fff;
-    border: var(--thin-gray-border);
+    border: 0.2px solid #C8D0C9;
     padding: var(--title-padding);
     margin-bottom: 50px;
 }
