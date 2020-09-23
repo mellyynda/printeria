@@ -556,7 +556,7 @@ for an element's width and height */
 
 /* styles the tab navigation link and buttons outline */
 *:focus {
-    outline: thin dotted;
+    outline: thin dotted #E0AD34;
 }
 
 
@@ -1202,6 +1202,11 @@ input[type="tel"]:focus,
     margin-top: 20px;
 }
 
+.members button:focus {
+    position: relative;
+    top: -2px;
+}
+
 .members button svg {
     display: inline-block;
 }
@@ -1238,4 +1243,16 @@ input[type="tel"]:focus,
     .footer-nav ul {
         flex-direction: row;
     }
+}
+
+/* developers signature
+  ==============================================================================
+*/
+.copyright {
+    text-align: center;
+    padding: var(--box-padding);
+}
+
+.developer-signature {
+    color: var(--green-txt);
 }
