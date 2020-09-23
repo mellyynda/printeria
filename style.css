@@ -1198,7 +1198,7 @@ p {
     width: 80%;
     margin: 0 auto;
     max-width: 500px;
-    background: var(--green-bg);
+    background: #C8D0C9;
     padding: var(--box-padding);
     color: var(--dark-txt);
     border-radius: 5px;
@@ -1212,7 +1212,7 @@ p {
 .contact form textarea {
     width: 100%;
     line-height: 180%;
-    background-color: var(--green-bg);
+    background-color: #C8D0C9;
 }
 
 .contact form p {
