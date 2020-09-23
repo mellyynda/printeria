@@ -1118,14 +1118,14 @@ input[type="tel"],
     border: none;
     margin-bottom: var(--margin-small);
     border-bottom: 1px solid #DDD;
+    box-shadow: 0 4px 5px -5px #0c1f22;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 .contact form textarea:focus {
-    box-shadow: 0 2px 5px -6px #E0AD34;
-    border-bottom: 1px solid #E0AD34;
+    border-bottom: var(--dark-border);
 }
 
 .contact form button {
@@ -1136,8 +1136,8 @@ input[type="tel"]:focus,
     height: 50px;
     margin: 0 auto;
     background: var(--yellow-bg);
-    color: var(--white-txt);
     border-radius: 50px;
+    box-shadow: 0 0 3px var(--dark-bg);
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
@@ -1149,8 +1149,13 @@ input[type="tel"]:focus,
     background-color: var(--white-txt);
 }
 
+
+
 /*
   ==============================================================================
   Footer
+  ==============================================================================
+*/
+/* member discount section
   ==============================================================================
 */
