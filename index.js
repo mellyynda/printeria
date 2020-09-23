@@ -28,3 +28,16 @@
 
  menuButtonEffects();
  openMobileNav();
+
+ let positionOfferCards = function () {
+     let cardsContainer = document.querySelector('.offers');
+     let cards = document.querySelectorAll('.card');
+     let screenWidth = window.innerWidth;
+
+
+     if (screenWidth == 800 || screenWidth >= 1200) {
+         cardsContainer.style.marginTop = "0";
+     } else cardsContainer.style.marginTop = "50px";
+ }
+
+ positionOfferCards();

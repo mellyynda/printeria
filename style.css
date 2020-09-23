@@ -947,17 +947,25 @@ p {
   Offers section
   ==============================================================================
 */
+.offers {
+    display: flex;
+    overflow: hidden;
+    background-position: center;
+    flex-wrap: wrap;
+    margin: 50px 0;
+}
+
 .card {
     width: 90%;
+    min-width: 300px;
+    max-width: 400px;
     margin: 0 auto;
-    padding: var(--img-padding);
 }
 
 .card img {
     width: 100%;
     box-shadow: var(--shadow);
 }
-
 
 
 /*
