@@ -1061,7 +1061,6 @@ p {
 
 
 
-
 /*
   ==============================================================================
   My products section
@@ -1070,6 +1069,11 @@ p {
 /* products style and alignment
   ==============================================================================
   */
+.products {
+
+    margin-bottom: 50px;
+}
+
 .products img {
     width: 100%;
 }
@@ -1160,6 +1164,7 @@ p {
     background-color: #fff;
     border: var(--thin-gray-border);
     padding: var(--title-padding);
+    margin-bottom: 50px;
 }
 
 .flexcontainer article {
