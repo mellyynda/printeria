@@ -616,6 +616,8 @@ html::-webkit-scrollbar {
     --img-padding: 15px;
     --title-padding: 15px;
     --box-padding: 20px;
+    --margin-small: 20px;
+    --margin-big: 40px;
     /* rating stars */
     --star-size: calc(14px + (18 - 14) * ((100vw - 300px) / (1500 - 300)));
     --star-color: #fff;
@@ -1083,11 +1085,10 @@ p {
     width: 80%;
     margin: 0 auto;
     max-width: 550px;
-    background: var(--blue-bg);
+    background: var(--green-bg);
     padding: var(--box-padding);
-    color: var(--white-txt);
+    color: var(--dark-txt);
     border-radius: 5px;
-
 }
 
 .contact form h2 {
@@ -1098,34 +1099,54 @@ p {
 .contact form textarea {
     width: 100%;
     line-height: 180%;
-    border-radius: 5px;
+    background-color: var(--green-bg);
+}
+
+.contact form p {
+    margin-bottom: var(--margin-small);
 }
 
 input[type="text"],
 input[type="email"],
 input[type="tel"],
-textarea {
+.contact form textarea {
     -webkit-transition: all 0.30s ease-in-out;
     -moz-transition: all 0.30s ease-in-out;
     -ms-transition: all 0.30s ease-in-out;
     -o-transition: all 0.30s ease-in-out;
     outline: none;
-    padding: 3px 0px 3px 3px;
-    margin: 5px 1px 3px 0px;
-    border: 1px solid transparent;
-    border-top: none;
+    border: none;
+    margin-bottom: var(--margin-small);
     border-bottom: 1px solid #DDD;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
 }
 
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
-textarea:focus {
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    padding: 3px 0px 3px 3px;
-    margin: 5px 1px 3px 0px;
-    border: 1px solid rgba(81, 203, 238, 1);
+.contact form textarea:focus {
+    box-shadow: 0 2px 5px -6px #E0AD34;
+    border-bottom: 1px solid #E0AD34;
+}
+
+.contact form button {
+    display: block;
+    padding: var(--icon-padding);
+    border: none;
+    width: 30%;
+    height: 50px;
+    margin: 0 auto;
+    background: var(--yellow-bg);
+    color: var(--white-txt);
+    border-radius: 50px;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+}
+
+.contact form button:focus {
+    color: var(--dark-txt);
+    background-color: var(--white-txt);
 }
 
 /*
