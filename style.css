@@ -922,7 +922,7 @@ p {
     line-height: 110%;
 }
 
-.social {
+/* .social {
     display: inline-flex;
     justify-content: space-evenly;
 }
@@ -944,7 +944,7 @@ p {
 .social a img:focus {
     position: relative;
     top: -2px;
-}
+} */
 
 
 /*
@@ -1340,6 +1340,36 @@ input[type="tel"]:focus,
 
 .members button svg {
     display: inline-block;
+}
+
+/* footer social links
+  ==============================================================================
+*/
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding-top: var(--box-padding);
+}
+
+.social a {
+    padding-top: var(--icon-padding);
+    padding-bottom: var(--icon-padding);
+    line-height: 0;
+}
+
+.social a img {
+    border-radius: 10px;
+    width: 30px;
+    transition: all .2s linear;
+    border: 2px solid #fff;
+}
+
+.social a img:hover,
+.social a img:active,
+.social a img:focus {
+    position: relative;
+    top: -2px;
 }
 
 /* footer links
