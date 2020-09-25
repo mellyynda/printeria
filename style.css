@@ -578,7 +578,7 @@ html::-webkit-scrollbar {
 :root {
     /* text color  */
     --yellow-txt: #E0AD34;
-    --white-txt: #fdfef6;
+    --white-txt: #fff;
     --dark-txt: #001033;
     --blue-txt: #286671;
     --green-txt: #99c9b0;
