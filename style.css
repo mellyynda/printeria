@@ -584,7 +584,7 @@ html::-webkit-scrollbar {
     --green-txt: #99c9b0;
     /* background color */
     --yellow-bg: #E0AD34;
-    --white-bg: #fdfef6;
+    --white-bg: #fff;
     --dark-bg: #0c1f22;
     --blue-bg: #286671;
     --green-bg: #99c9b0;
@@ -908,7 +908,7 @@ p {
 .cover h2 {
     line-height: 100%;
     padding: var(--txt-padding);
-    background-color: rgba(126, 151, 156, .4);
+    background-color: rgba(255, 255, 255, 0.4);
     border-radius: 5px;
     align-self: flex-start;
     margin: 0 0 20px 5%;
