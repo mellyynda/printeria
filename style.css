@@ -1356,6 +1356,7 @@ input[type="tel"]:focus,
     justify-content: space-evenly;
     width: 100%;
     padding-top: var(--box-padding);
+
 }
 
 .social a {
@@ -1368,7 +1369,7 @@ input[type="tel"]:focus,
     border-radius: 10px;
     width: 30px;
     transition: all .2s linear;
-    border: 2px solid #fff;
+    fill: var(--white-txt);
 }
 
 .social a img:hover,
@@ -1393,7 +1394,6 @@ input[type="tel"]:focus,
 
 .footer-nav li {
     padding: var(--button-padding);
-    border-bottom: var(--thin-yellow-border);
 }
 
 .footer-nav li a {
