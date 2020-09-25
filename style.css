@@ -914,7 +914,7 @@ p {
 .cover h2 {
     line-height: 100%;
     padding: var(--txt-padding);
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 5px;
     align-self: flex-start;
     margin: 0 0 20px 5%;
@@ -925,32 +925,10 @@ p {
     text-decoration: none;
     color: var(--dark-txt);
     font-size: var(--txt-big);
+    font-family: var(--text-font);
     line-height: 110%;
 }
 
-/* .social {
-    display: inline-flex;
-    justify-content: space-evenly;
-}
-
-.social a {
-    padding-top: var(--icon-padding);
-    padding-bottom: var(--icon-padding);
-    line-height: 0;
-}
-
-.social a img {
-    border-radius: 10px;
-    width: 30px;
-    transition: all .2s linear;
-}
-
-.social a img:hover,
-.social a img:active,
-.social a img:focus {
-    position: relative;
-    top: -2px;
-} */
 
 
 /*
