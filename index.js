@@ -8,15 +8,17 @@
      let x = document.getElementById('x');
      let clickCount = 0;
 
-     window.addEventListener('scroll', function makeNavFixed() {
-         if (window.pageYOffset != 0) {
-             navBarToggle.classList.add("fixed-toggle");
-             mainNav.classList.add("fixed-active-nav");
-         } else {
-             navBarToggle.classList.remove("fixed-toggle");
-             mainNav.classList.remove("fixed-active-nav");
-         }
-     });
+     if (window.innerWidth < 1020) {
+         window.addEventListener('scroll', function makeNavFixed() {
+             if (window.pageYOffset != 0) {
+                 navBarToggle.classList.add("fixed-toggle");
+                 mainNav.classList.add("fixed-active-nav");
+             } else {
+                 navBarToggle.classList.remove("fixed-toggle");
+                 mainNav.classList.remove("fixed-active-nav");
+             }
+         });
+     };
 
      navBarToggle.addEventListener('click', function () {
          clickCount++;
