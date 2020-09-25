@@ -1,9 +1,22 @@
  //changes toggle from x to hamburger and back
+
+ let mainNav = document.getElementById('js-menu');
+
  function menuButtonEffects() {
      let navBarToggle = document.getElementById('js-navbar-toggle');
      let hamburger = document.getElementById('burger');
      let x = document.getElementById('x');
      let clickCount = 0;
+
+     window.addEventListener('scroll', function makeNavFixed() {
+         if (window.pageYOffset != 0) {
+             navBarToggle.classList.add("fixed-toggle");
+             mainNav.classList.add("fixed-active-nav");
+         } else {
+             navBarToggle.classList.remove("fixed-toggle");
+             mainNav.classList.remove("fixed-active-nav");
+         }
+     });
 
      navBarToggle.addEventListener('click', function () {
          clickCount++;
@@ -16,6 +29,8 @@
          }
      });
  };
+
+
 
  //  margin top resize function 
  // let positionOfferCards = function () {
@@ -35,7 +50,7 @@
 
  // opens main nav
  function openMobileNav() {
-     let mainNav = document.getElementById('js-menu');
+
      let navBarToggle = document.getElementById('js-navbar-toggle');
 
      navBarToggle.addEventListener('click', function () {
