@@ -1404,6 +1404,10 @@ input[type="tel"]:focus,
     .footer-nav ul {
         flex-direction: row;
     }
+
+    .footer-nav li {
+        border-bottom: none;
+    }
 }
 
 /* developers signature
