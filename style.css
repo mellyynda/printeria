@@ -870,6 +870,7 @@ h2 {
 
 h3 {
     padding: var(--txt-padding);
+    font-size: calc(var(--txt-size) + 5px);
 }
 
 .section-title {
