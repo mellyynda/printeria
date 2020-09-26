@@ -881,6 +881,8 @@ header a {
     top: -2px;
 }
 
+
+
 .search .searchTerm:hover+.searchButton,
 .search .searchTerm:active+.searchButton,
 .search .searchTerm:focus+.searchButton,
@@ -888,6 +890,46 @@ header a {
 .search .searchButton:active,
 .search .searchButton:focus {
     background: #fff;
+}
+
+/*creating tooltips for login and cart icons*/
+.cart a,
+.login a {
+    position: relative;
+}
+
+.tooltiptext-cart,
+.tooltiptext-login {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: var(--dark-txt);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+
+    z-index: 1;
+}
+
+.tooltiptext-cart {
+    left: -50px;
+    bottom: -70px;
+}
+
+.tooltiptext-login {
+    left: -20px;
+    bottom: -30px;
+    width: 80px;
+}
+
+.cart a svg:hover+.tooltiptext-cart,
+.cart a svg:active+.tooltiptext-cart,
+.cart a svg:focus+.tooltiptext-cart,
+.login a svg:hover+.tooltiptext-login,
+.login a svg:active+.tooltiptext-login,
+.login a svg:focus+.tooltiptext-login {
+    visibility: visible;
 }
 
 
@@ -1228,7 +1270,6 @@ p {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    /* border: 0.2px solid #C8D0C9; */
     padding: var(--title-padding);
     margin-bottom: 50px;
 }
@@ -1455,42 +1496,7 @@ input[type="tel"]:hover,
     top: -2px;
 }
 
-/* footer links
-  ==============================================================================
-*/
-.footer-nav ul {
-    width: 80%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
 
-    justify-content: space-around;
-}
-
-.footer-nav li {
-    padding: var(--button-padding);
-}
-
-.footer-nav li a {
-    text-decoration: none;
-    color: var(--white-txt);
-    white-space: nowrap;
-}
-
-.footer-nav li a:focus {
-    color: var(--yellow-txt);
-}
-
-@media screen and (min-width:642px) {
-    .footer-nav ul {
-        flex-direction: row;
-    }
-
-    .footer-nav li {
-        border-bottom: none;
-    }
-}
 
 /* developers signature
   ==============================================================================
