@@ -610,11 +610,11 @@ html::-webkit-scrollbar {
     /* shadows */
     /* Create smoother box-shadows by layering multiple
  * shadows with gradually increasing radius and offset */
-    --shadow: 0 1px 1px rgba(0, 0, 0, 0.12),
-        0 2px 2px rgba(0, 0, 0, 0.12),
-        0 4px 4px rgba(0, 0, 0, 0.12),
-        0 8px 8px rgba(0, 0, 0, 0.12),
-        0 16px 16px rgba(0, 0, 0, 0.12);
+    --shadow: 0 0 1px rgba(0, 0, 0, 0.2),
+        0 0 2px rgba(0, 0, 0, 0.2),
+        0 0 4px rgba(0, 0, 0, 0.2),
+        0 0 8px rgba(0, 0, 0, 0.2),
+        0 0 16px rgba(0, 0, 0, 0.2);
     /* paddings */
     --button-padding: 15px;
     --icon-padding: 10px;
@@ -702,7 +702,7 @@ main,
     max-width: 100vw;
 }
 
-/* nav toggle and logo alignment and style */
+/* .half separates nav in 2 divs each with 2 components: toggle with logo and login with basket */
 .half {
     display: inline-flex;
     flex-grow: 1;
@@ -714,6 +714,7 @@ main,
     justify-content: flex-end;
 }
 
+/* search bar */
 .search {
     order: 3;
     flex-grow: 3;
@@ -732,7 +733,10 @@ main,
     }
 }
 
-/* dropdown nav links alignment
+/* Navbar components
+  ==============================================================================
+  */
+/* dropdown nav links
   ==============================================================================
   */
 .main-nav {
@@ -753,18 +757,25 @@ main,
     flex: 0 0 340px;
 }
 
-/* Navbar components
-  ==============================================================================
-  */
-/* nav links */
 header a {
     display: block;
+    text-decoration: none;
 }
 
+.main-nav li a {
+    padding: var(--button-padding);
+    color: var(--white-txt);
+    font-family: var(--text-font);
+    text-decoration: none;
+    border-top: var(--yellow-border);
+}
+
+/* cross that shows when menu links are open */
 .x-none {
     display: none;
 }
 
+/* adds to the menu icon respectivly navbar links on scroll down this way you can access the menu even when you are not at the top of the page */
 .fixed-toggle {
     position: fixed;
     z-index: 4;
@@ -787,15 +798,7 @@ header a {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.main-nav li a {
-    display: block;
-    padding: var(--button-padding);
-    color: var(--white-txt);
-    font-family: var(--text-font);
-    text-decoration: none;
-    border-top: var(--yellow-border);
-}
-
+/* svg icon wrappers */
 .login,
 .cart,
 .hamburger {
@@ -803,10 +806,7 @@ header a {
     padding: var(--icon-padding);
 }
 
-.logo a {
-    text-decoration: none;
-}
-
+/* logo text wrapper */
 .brand {
     font-size: 2rem;
     background: linear-gradient(to right bottom, var(--yellow-txt), var(--white-txt));
@@ -815,6 +815,7 @@ header a {
     padding: var(--txt-padding);
 }
 
+/* navigation icons */
 .hamburger svg,
 .menu-toggle,
 .login svg,
@@ -823,14 +824,16 @@ header a {
     color: var(--white-txt);
 }
 
+/* search wrapper */
 .search {
     padding: var(--icon-padding);
 }
 
+/* search input */
 .searchTerm {
     width: calc(100% - 50px);
     height: 36px;
-    border: 3px solid#dedede;
+    border: none;
     border-right: none;
     padding: 5px;
     border-radius: 5px 0 0 5px;
@@ -838,15 +841,17 @@ header a {
     color: var(--dark-txt);
 }
 
+/* search button */
 .searchButton {
     width: 40px;
     height: 36px;
-    border: 1px solid#dedede;
-    background: #dedede;
+    border: none;
+    background: var(--green-bg);
     text-align: center;
     color: var(--dark-txt);
     border-radius: 0 5px 5px 0;
     cursor: pointer;
+    transition: 0.3s background ease-out;
 }
 
 .searchButton svg {
@@ -854,6 +859,37 @@ header a {
     height: 36px;
     margin: 0 auto color: var(--dark-txt)
 }
+
+/* hover, active and focus styles for navbar elements*/
+.menu-toggle svg:active,
+.menu-toggle svg:hover,
+.menu-toggle svg:focus {
+    background-color: rgba(40, 102, 113, .7);
+    border-radius: 3px;
+}
+
+.brand:hover,
+.brand:active,
+.brand:focus,
+.cart a svg:hover,
+.cart a svg:active,
+.cart a svg:focus,
+.login a svg:hover,
+.login a svg:active,
+.login a svg:focus {
+    position: relative;
+    top: -2px;
+}
+
+.search .searchTerm:hover+.searchButton,
+.search .searchTerm:active+.searchButton,
+.search .searchTerm:focus+.searchButton,
+.search .searchButton:hover,
+.search .searchButton:active,
+.search .searchButton:focus {
+    background: #fff;
+}
+
 
 @media screen and (min-width: 1020px) {
     .main-nav {
@@ -938,7 +974,6 @@ p {
     align-self: flex-end;
     margin-bottom: 5%;
     text-align: center;
-    transition: all 0.3s ease;
 }
 
 @media screen and (min-width: 1000px) {
@@ -952,25 +987,18 @@ p {
     }
 }
 
-.cover h2:hover,
-.cover h2:active,
-.cover h2:focus {
-    background-color: var(--dark-bg);
-    color: var(--white-txt);
-}
-
 .cover h2 a {
     text-decoration: none;
     color: var(--dark-txt);
     font-size: var(--title-size);
     line-height: 110%;
-    transition: all 0.3s ease;
 }
 
 .cover h2 a:hover,
 .cover h2 a:focus,
 .cover h2 a:active {
-    color: var(--white-txt);
+    position: relative;
+    top: -2px;
 }
 
 
