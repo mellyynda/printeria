@@ -777,7 +777,7 @@ header a {
     position: fixed;
     top: 0;
     left: 0;
-    padding-top: 100px;
+    padding: 100px 0;
     z-index: 3;
     background: var(--dark-bg);
     /* fallback for old browsers */
@@ -928,26 +928,51 @@ p {
      on the container's size */
     background-size: cover;
     display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 .cover h2 {
     line-height: 100%;
-    padding: var(--txt-padding);
+    padding: var(--box-padding);
     background-color: rgba(255, 255, 255, 0.7);
+    border: var(--thin-dark-border);
+    box-shadow: var(--shadow);
     border-radius: 5px;
-    align-self: flex-start;
-    margin: 0 0 20px 5%;
+    align-self: flex-end;
+    margin-bottom: 5%;
     text-align: center;
+    transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 720px) {
+    .cover {
+        justify-content: flex-start;
+    }
+
+    .cover h2 {
+        margin: 0 0 15% 10%;
+    }
+}
+
+.cover h2:hover,
+.cover h2:active,
+.cover h2:focus {
+    background-color: var(--dark-bg);
+    color: var(--white-txt);
 }
 
 .cover h2 a {
     text-decoration: none;
     color: var(--dark-txt);
-    font-size: var(--txt-big);
-    font-family: var(--text-font);
+    font-size: var(--title-size);
     line-height: 110%;
+    transition: all 0.3s ease;
+}
+
+.cover h2 a:hover,
+.cover h2 a:focus,
+.cover h2 a:active {
+    color: var(--white-txt);
 }
 
 
