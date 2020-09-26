@@ -1080,7 +1080,7 @@ p {
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.2s ease;
 }
 
 .on-dot,
@@ -1140,6 +1140,13 @@ p {
     width: 80%;
     margin: 0 auto;
     position: relative;
+}
+
+/*product images on hover active and focus*/
+.products img:hover,
+.products img:active,
+.products img:focus {
+    box-shadow: var(--shadow);
 }
 
 /* components style and alignment
@@ -1267,6 +1274,11 @@ p {
     background: linear-gradient(var(--blue-bg), var(--white-bg));
 }
 
+/*articles on hover focus and active*/
+.flexcontainer article:hover {
+    position: relative;
+    top: -2px;
+}
 
 
 /*
@@ -1314,9 +1326,17 @@ input[type="tel"],
 }
 
 input[type="text"]:focus,
+input[type="text"]:active,
+input[type="text"]:hover,
 input[type="email"]:focus,
+input[type="email"]:hover,
+input[type="email"]:active,
 input[type="tel"]:focus,
-.contact form textarea:focus {
+input[type="tel"]:active,
+input[type="tel"]:hover,
+.contact form textarea:focus,
+.contact form textarea:active,
+.contact form textarea:hover {
     border-bottom: var(--dark-border);
 }
 
@@ -1337,7 +1357,9 @@ input[type="tel"]:focus,
     -o-transition: all 0.30s ease-in-out;
 }
 
-.contact form button:focus {
+.contact form button:focus,
+.contact form button:active,
+.contact form button:hover {
     color: var(--dark-txt);
     background-color: var(--white-txt);
 }
@@ -1387,9 +1409,12 @@ input[type="tel"]:focus,
     margin-top: 20px;
 }
 
-.members button:focus {
+.members button:focus,
+.members button:active,
+.members button:hover {
     position: relative;
     top: -2px;
+    box-shadow: var(--shadow);
 }
 
 .members button svg {
