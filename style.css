@@ -1143,9 +1143,12 @@ p {
 }
 
 /*product images on hover active and focus*/
-.products img:hover,
-.products img:active,
-.products img:focus {
+.smallcard:hover img,
+.smallcard:active img,
+.smallcard:focus img,
+.bigcard:hover img,
+.bigcard:active img,
+.bigcard:focus img {
     box-shadow: var(--shadow);
 }
 
