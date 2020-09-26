@@ -796,11 +796,6 @@ header a {
     border-top: var(--yellow-border);
 }
 
-/* .logo img {
-    width: 100%;
-    border-radius: 8px;
-} */
-
 .login,
 .cart,
 .hamburger {
@@ -933,6 +928,8 @@ p {
 
 .cover h2 {
     line-height: 100%;
+    width: 60%;
+    max-width: 306px;
     padding: var(--box-padding);
     background-color: rgba(255, 255, 255, 0.7);
     border: var(--thin-dark-border);
@@ -944,13 +941,14 @@ p {
     transition: all 0.3s ease;
 }
 
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 1000px) {
     .cover {
         justify-content: flex-start;
     }
 
     .cover h2 {
-        margin: 0 0 15% 10%;
+        margin-left: 10%;
+        align-self: center;
     }
 }
 
