@@ -176,7 +176,7 @@
  }
 
 
- // creats red bottom border to inputs field if what you enter in not valid
+ // creats red bottom border to inputs field if what you enter in not valid still need to make it go back to default when the form is deselected
  let invalidStyle = function () {
      let fields = document.querySelectorAll('.contact form input');
      l(fields);
@@ -195,7 +195,5 @@
              text.style.borderColor = "red";
          } else text.style.borderColor = "green";
      })
-
-
  }
  invalidStyle();
