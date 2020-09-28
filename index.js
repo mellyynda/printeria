@@ -106,3 +106,51 @@
 
  }
  makeCoverFull();
+
+ //add content to valid inputs
+ //  let addChckedMark = () => {
+ //      let fields = document.querySelectorAll('.contact form input');
+ //      console.log(fields);
+ //      fields.forEach(field => {
+ //          console.log(field);
+ //          if (field.checkValidity()) {
+ //              console.log(field);
+ //          }
+ //      })
+ //  }
+ //  addChckedMark();
+
+
+ // create a DOM element response for submitting the form
+ let addResponse = function () {
+
+     let name = document.getElementById('name');
+     console.log(name);
+
+     let email = document.querySelector('#contact > form > label:nth-child(4) > input[type=email]');
+     console.log(email);
+
+     let tel = document.querySelector('#contact > form > label:nth-child(5) > input[type=tel]');
+     console.log(tel);
+
+     let message = document.getElementById('message');
+     console.log(message);
+
+     let parent = document.querySelector('.submit-response');
+     console.log(parent);
+
+     let tag = document.createElement('p');
+     console.log(tag);
+
+     let text = document.createTextNode('*Thank you for your message. Your concerns are important for us. We will answer within 5 working days.')
+     console.log(text);
+
+     tag.appendChild(text);
+     console.log(tag);
+
+     parent.appendChild(tag);
+
+     parent.style.padding = "20px";
+
+     window.location.hash = "#submit-response";
+ }

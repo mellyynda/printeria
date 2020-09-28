@@ -1384,6 +1384,13 @@ input[type="tel"]:hover,
     border-bottom: var(--dark-border);
 }
 
+input[type="text"]:valid,
+input[type="email"]:valid,
+input[type="tel"]:valid,
+.contact form textarea:valid {
+    content: "&#10003";
+}
+
 .contact form button {
     display: block;
     padding: var(--button-padding);
@@ -1404,8 +1411,16 @@ input[type="tel"]:hover,
 .contact form button:focus,
 .contact form button:active,
 .contact form button:hover {
-    color: var(--dark-txt);
     background-color: var(--white-txt);
+}
+
+/* form subbmision response section
+  ==============================================================================
+*/
+.submit-response {
+    margin: 0 auto;
+    max-width: 500px;
+    color: red;
 }
 
 
