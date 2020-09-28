@@ -574,6 +574,11 @@ html::-webkit-scrollbar {
     display: none;
 }
 
+abbr {
+    text-decoration: none;
+    border-bottom: none;
+}
+
 /* main variables are used in order to be able to quickly change styles if needed or in case of rebranding */
 :root {
     /* text color  */

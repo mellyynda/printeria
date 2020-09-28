@@ -4,6 +4,13 @@
  }
 
 
+ // reload page on resize to avoid bad layout
+ //  window.addEventListener('resize', function () {
+ //      "use strict";
+ //      window.location.reload();
+ //  });
+
+
  //changes toggle from x to hamburger and back
 
  let mainNav = document.getElementById('js-menu');
@@ -139,6 +146,12 @@
  //  }
  //  addCheckedMark();
 
+
+
+
+ //=========================================================================================
+ // Form functions
+ //=========================================================================================
 
  //declaring form fields on a global scope
  let name = document.getElementById('name');
