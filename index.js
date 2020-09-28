@@ -1,3 +1,9 @@
+ //console log in one letter
+ function l(param) {
+     console.log(param);
+ }
+
+
  //changes toggle from x to hamburger and back
 
  let mainNav = document.getElementById('js-menu');
@@ -31,7 +37,6 @@
          }
      });
  };
-
 
  // opens main nav
  function openMobileNav() {
@@ -108,17 +113,32 @@
  makeCoverFull();
 
  //add content to valid inputs
- //  let addChckedMark = () => {
+ //  let addCheckedMark = () => {
+ //      //create an array to store all valid inputs
  //      let fields = document.querySelectorAll('.contact form input');
- //      console.log(fields);
+ //      l(fields);
+ //      let messageField = document.querySelector('#message');
+ //      l(messageField);
+
+ //      //select elements with valid inputs using css :valid pseudoclass
+ //      //  let validName = document.querySelector('input[type="text"]:valid');
+ //      //  let validEmail = document.querySelector('input[type="email"]:valid');
+ //      //  let validTel = document.querySelector('input[type="text"]:valid');
+ //      //  let validMessage = document.querySelector('.contact form textarea:valid');
+
+
+ //      //push all elements in the array
+ //      //  fields.push(validName);
+ //      //  fields.push(validEmail);
+ //      //  fields.push(validTel);
+ //      //  fields.push(validMessage);
+
  //      fields.forEach(field => {
- //          console.log(field);
- //          if (field.checkValidity()) {
- //              console.log(field);
- //          }
- //      })
+ //          field.textContent.innerHTML += '&#10003;';
+ //      });
  //  }
- //  addChckedMark();
+ //  addCheckedMark();
+
 
 
  // create a DOM element response for submitting the form
@@ -142,7 +162,7 @@
      let tag = document.createElement('p');
      console.log(tag);
 
-     let text = document.createTextNode('*Thank you for your message. Your concerns are important for us. We will answer within 5 working days.')
+     let text = document.createTextNode(`*Thank you ${name} for your message. Your concerns are important for us. We will answer within 5 working days.`)
      console.log(text);
 
      tag.appendChild(text);
@@ -152,5 +172,5 @@
 
      parent.style.padding = "20px";
 
-     window.location.hash = "#submit-response";
+     parent.scrollIntoView();
  }

@@ -1367,6 +1367,7 @@ input[type="tel"],
     margin-bottom: var(--margin-small);
     border-bottom: 1px solid #DDD;
     box-shadow: 0 4px 5px -5px #0c1f22;
+    background-color: none;
 }
 
 input[type="text"]:focus,
@@ -1388,7 +1389,7 @@ input[type="text"]:valid,
 input[type="email"]:valid,
 input[type="tel"]:valid,
 .contact form textarea:valid {
-    content: "&#10003";
+    border-color: rgb(3, 123, 43);
 }
 
 .contact form button {
