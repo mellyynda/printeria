@@ -140,22 +140,22 @@
  //  addCheckedMark();
 
 
+ //declaring form fields on a global scope
+ let name = document.getElementById('name');
+ console.log(name);
+
+ let email = document.querySelector('#contact > form > label:nth-child(4) > input[type=email]');
+ console.log(email);
+
+ let tel = document.querySelector('#contact > form > label:nth-child(5) > input[type=tel]');
+ console.log(tel);
+
+ let message = document.getElementById('message');
+ console.log(message);
+
 
  // create a DOM element response for submitting the form
  let addResponse = function () {
-
-     let name = document.getElementById('name');
-     console.log(name);
-
-     let email = document.querySelector('#contact > form > label:nth-child(4) > input[type=email]');
-     console.log(email);
-
-     let tel = document.querySelector('#contact > form > label:nth-child(5) > input[type=tel]');
-     console.log(tel);
-
-     let message = document.getElementById('message');
-     console.log(message);
-
      let parent = document.querySelector('.submit-response');
      console.log(parent);
 
@@ -174,3 +174,28 @@
 
      parent.scrollIntoView();
  }
+
+
+ // creats red bottom border to inputs field if what you enter in not valid
+ let invalidStyle = function () {
+     let fields = document.querySelectorAll('.contact form input');
+     l(fields);
+     let text = document.querySelector('#message');
+
+     fields.forEach(field => {
+         field.addEventListener("input", function () {
+
+             if (!field.checkValidity()) {
+                 field.style.borderColor = "red";
+             } else field.style.borderColor = "green";
+         })
+     })
+     text.addEventListener("input", function () {
+         if (!text.checkValidity()) {
+             text.style.borderColor = "red";
+         } else text.style.borderColor = "green";
+     })
+
+
+ }
+ invalidStyle();
