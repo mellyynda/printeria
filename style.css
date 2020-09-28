@@ -1392,6 +1392,13 @@ input[type="tel"]:valid,
     border-color: rgb(3, 123, 43);
 }
 
+/* input[type="text"]:invalid:required,
+input[type="email"]:invalid:required,
+input[type="tel"]:invalid:required,
+.contact form textarea:invalid:required {
+    border-color: orangered;
+} */
+
 .contact form button {
     display: block;
     padding: var(--button-padding);
