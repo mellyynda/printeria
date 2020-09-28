@@ -162,7 +162,7 @@
      let tag = document.createElement('p');
      console.log(tag);
 
-     let text = document.createTextNode(`*Thank you ${name} for your message. Your concerns are important for us. We will answer within 5 working days.`)
+     let text = document.createTextNode(`*Thank you ${name.value} for your message. Your concerns are important for us. We will answer within 5 working days.`)
      console.log(text);
 
      tag.appendChild(text);
