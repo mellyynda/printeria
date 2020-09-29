@@ -857,7 +857,8 @@ header a {
 .searchButton svg {
     width: 100%;
     height: 36px;
-    margin: 0 auto color: var(--dark-txt)
+    margin: 0 auto;
+    color: var(--dark-txt)
 }
 
 /* hover, active and focus styles for navbar elements*/
@@ -1219,7 +1220,8 @@ p {
     --percent: calc(var(--rating) / 5 * 100%);
     display: inline-block;
     font-size: var(--star-size);
-    font-family: Times; // make sure ★ appears correctly
+    font-family: Times;
+    /* make sure ★ appears correctly */
     line-height: 1;
 }
 
@@ -1367,7 +1369,6 @@ input[type="tel"],
     margin-bottom: var(--margin-small);
     border-bottom: 1px solid #DDD;
     box-shadow: 0 4px 5px -5px #0c1f22;
-    background-color: none;
 }
 
 input[type="text"]:focus,
