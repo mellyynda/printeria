@@ -1389,7 +1389,7 @@ input[type="text"]:valid,
 input[type="email"]:valid,
 input[type="tel"]:valid,
 .contact form textarea:valid {
-    border-color: rgb(3, 123, 43);
+    /* border-color: rgb(3, 123, 43); */
 }
 
 /* input[type="text"]:invalid:required,

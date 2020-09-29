@@ -198,9 +198,11 @@
      fields.forEach(field => {
          field.addEventListener("input", function () {
 
-             if (!field.checkValidity()) {
-                 field.style.borderColor = "red";
-             } else field.style.borderColor = "green";
+             if (field.value.trim()) {
+                 if (!field.checkValidity()) {
+                     field.style.borderColor = "red";
+                 } else field.style.borderColor = "green";
+             } else field.style.borderColor = null;
          })
      })
      text.addEventListener("input", function () {
