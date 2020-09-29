@@ -166,9 +166,25 @@
  let message = document.getElementById('message');
  console.log(message);
 
+ let form = document.getElementById('contact-form');
+
+ //set all input elements equal to nothing
+ let resetForm = function () {
+     name.value = '';
+     email.value = '';
+     tel.value = '';
+     message.value = '';
+     name.style.borderColor = null;
+     email.style.borderColor = null;
+     tel.style.borderColor = null;
+     message.style.borderColor = null;
+ }
 
  // create a DOM element response for submitting the form
- let addResponse = function () {
+ form.addEventListener('submit', e => {
+
+     e.preventDefault();
+
      let parent = document.querySelector('.submit-response');
      console.log(parent);
 
@@ -184,9 +200,11 @@
      parent.appendChild(tag);
 
      parent.style.padding = "20px";
-
      parent.scrollIntoView();
- }
+     resetForm();
+     //  form.reset();
+ });
+
 
 
  // creats red bottom border to inputs field if what you enter in not valid still need to make it go back to default when the form is deselected

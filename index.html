@@ -245,7 +245,7 @@
 
         <section id="contact" class="contact wide">
 
-            <form action="#" method="POST">
+            <form id="contact-form" action="#" method="POST">
                 <h2 class="section-title">Contact us</h2>
                 <p>We are here to help.</p>
                 <label for="name">Name <abbr title="This field is mandatory" aria-label="required">*</abbr>
@@ -263,7 +263,7 @@
                     <textarea name="message" id="message" cols="30" rows="7" maxlength="800"
                         placeholder="Drop us a line ..." required></textarea><br>
                 </label>
-                <button type="submit" onclick=" addResponse()">Send now</button>
+                <button id="btnContact" type="submit">Send now</button>
             </form>
 
             <!--Div where response is generated after submitting form-->
