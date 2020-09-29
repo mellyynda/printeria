@@ -4,7 +4,7 @@
  }
 
 
- // reload page on resize to avoid bad layout
+ //  reload page on resize to avoid bad layout-doesn't work, kills my layout
  //  window.addEventListener('resize', function () {
  //      "use strict";
  //      window.location.reload();
