@@ -16,7 +16,7 @@
             <div class="flex-cont">
                 <div class="half">
                     <div class="hamburger">
-                        <p id="js-navbar-toggle" class="menu-toggle">
+                        <p id="js-navbar-toggle" class="menu-toggle" tabindex="1">
                             <svg id='burger' xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 24 24"
                                 width="40px">
                                 <path d="M0 0h24v24H0z" fill="none" />
@@ -39,7 +39,7 @@
 
                 <section class="search">
                     <input type="search" class="searchTerm" placeholder="What are you looking for?">
-                    <button type="submit" class="searchButton">
+                    <button type="submit" name="search" class="searchButton">
                         <!-- svg Created by juli from the Noun Project-->
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
                             x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;"
@@ -49,6 +49,7 @@
                         </svg>
                     </button>
                 </section>
+
                 <div class="half">
                     <section class="login">
                         <a href="#">
@@ -58,6 +59,7 @@
                                 <path
                                     d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
                             </svg>
+                            <span class="tooltiptext-login">Log in</span>
                         </a>
                     </section>
                     <section class="cart">
@@ -68,6 +70,7 @@
                                 <path
                                     d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
                             </svg>
+                            <span class="tooltiptext-cart">Check shopping bag</span>
                         </a>
                     </section>
                 </div>
@@ -90,7 +93,7 @@
 
         <section class="intro">
             <div class="cover">
-                <h2 class="title"><a href="#products"> Get your<br> fun t-shirt<br> now!</h2></a>
+                <h2 class="title"><a href="#products"> Get your fun t-&nbsp;shirt now!</h2></a>
             </div>
         </section>
 
@@ -243,22 +246,29 @@
             <form action="" method="POST">
                 <h2 class="section-title">Contact us</h2>
                 <p>We are here to help.</p>
-                <label for="name">
-                    <input type="text" name="name" placeholder="Full name *" required><br>
+                <label for="name">Name <abbr title="This field is mandatory" aria-label="required">*</abbr>
+                    <input id="name" type="text" name="name" placeholder="Full name " required maxlength="90"><br>
                 </label>
-                <label for="email">
-                    <input type="email" name="email" placeholder="Your email adress *" required><br>
+                <label for="email">Email <abbr title="This field is mandatory" aria-label="required">*</abbr>
+                    <input id="mail" type="email" name="email" placeholder="Your email adress " required
+                        maxlength="90"><br>
                 </label>
-                <label for="telephone">
-                    <input type="tel" name="telephone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-                        placeholder="Telephone number"><br>
+                <label for="telephone">Telephone <abbr title="This field is mandatory" aria-label="required">*</abbr>
+                    <input id="tel" type="tel" name="telephone" pattern="[0]{1}[0-9]{2}[0-9]{3}[0-9]{4}"
+                        placeholder="Telephone number " required maxlength="90"><br>
                 </label>
-                <label for="message">
-                    <textarea name="message" id="message" cols="30" rows="7"
-                        placeholder="Drop us a line ..."></textarea><br>
+                <label for="message"> Message <abbr title="This field is mandatory" aria-label="required">*</abbr>
+                    <textarea name="message" id="message" cols="30" rows="7" maxlength="800"
+                        placeholder="Drop us a line ..." required></textarea><br>
                 </label>
-                <button type="submit">Send now</button>
+                <button type="submit" onclick=" addResponse()">Send now</button>
             </form>
+
+            <!--Div where response is generated after submitting form-->
+            <section>
+                <div id="submit-response" class="submit-response">
+                </div>
+            </section>
         </section>
 
     </main>

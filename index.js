@@ -1,3 +1,16 @@
+ //console log in one letter
+ function l(param) {
+     console.log(param);
+ }
+
+
+ // reload page on resize to avoid bad layout
+ //  window.addEventListener('resize', function () {
+ //      "use strict";
+ //      window.location.reload();
+ //  });
+
+
  //changes toggle from x to hamburger and back
 
  let mainNav = document.getElementById('js-menu');
@@ -31,24 +44,6 @@
          }
      });
  };
-
-
-
- //  margin top resize function 
- // let positionOfferCards = function () {
- //      let cardsContainer = document.querySelector('.offers');
- //      let cards = document.querySelectorAll('.card');
- //      let screenWidth = window.innerWidth;
- //      console.log(cardsContainer);
- //      console.log(cards);
- //      console.log(screenWidth);
-
- //      if (screenWidth = 800) {
- //          cardsContainer.style.marginTop = "0";
- //      } else cardsContainer.style.marginTop = "50px";
- //  }
-
- //  positionOfferCards();
 
  // opens main nav
  function openMobileNav() {
@@ -123,3 +118,99 @@
 
  }
  makeCoverFull();
+
+ //add content to valid inputs
+ //  let addCheckedMark = () => {
+ //      //create an array to store all valid inputs
+ //      let fields = document.querySelectorAll('.contact form input');
+ //      l(fields);
+ //      let messageField = document.querySelector('#message');
+ //      l(messageField);
+
+ //      //select elements with valid inputs using css :valid pseudoclass
+ //      //  let validName = document.querySelector('input[type="text"]:valid');
+ //      //  let validEmail = document.querySelector('input[type="email"]:valid');
+ //      //  let validTel = document.querySelector('input[type="text"]:valid');
+ //      //  let validMessage = document.querySelector('.contact form textarea:valid');
+
+
+ //      //push all elements in the array
+ //      //  fields.push(validName);
+ //      //  fields.push(validEmail);
+ //      //  fields.push(validTel);
+ //      //  fields.push(validMessage);
+
+ //      fields.forEach(field => {
+ //          field.textContent.innerHTML += '&#10003;';
+ //      });
+ //  }
+ //  addCheckedMark();
+
+
+
+
+ //=========================================================================================
+ // Form functions
+ //=========================================================================================
+
+ //declaring form fields on a global scope
+ let name = document.getElementById('name');
+ console.log(name);
+
+ let email = document.querySelector('#contact > form > label:nth-child(4) > input[type=email]');
+ console.log(email);
+
+ let tel = document.querySelector('#contact > form > label:nth-child(5) > input[type=tel]');
+ console.log(tel);
+
+ let message = document.getElementById('message');
+ console.log(message);
+
+
+ // create a DOM element response for submitting the form
+ let addResponse = function () {
+     let parent = document.querySelector('.submit-response');
+     console.log(parent);
+
+     let tag = document.createElement('p');
+     console.log(tag);
+
+     let text = document.createTextNode(`*Thank you ${name.value} for your message. Your concerns are important for us. We will answer within 5 working days.`)
+     console.log(text);
+
+     tag.appendChild(text);
+     console.log(tag);
+
+     parent.appendChild(tag);
+
+     parent.style.padding = "20px";
+
+     parent.scrollIntoView();
+ }
+
+
+ // creats red bottom border to inputs field if what you enter in not valid still need to make it go back to default when the form is deselected
+ let invalidStyle = function () {
+     let fields = document.querySelectorAll('.contact form input');
+     l(fields);
+     let text = document.querySelector('#message');
+
+     fields.forEach(field => {
+         field.addEventListener("input", function () {
+
+             if (field.value.trim()) {
+                 if (!field.checkValidity()) {
+                     field.style.borderColor = "red";
+                 } else field.style.borderColor = "green";
+             } else field.style.borderColor = null;
+         })
+     })
+     text.addEventListener("input", function () {
+         if (text.value.trim()) {
+             if (!text.checkValidity()) {
+                 text.style.borderColor = "red";
+             } else text.style.borderColor = "green";
+         } else text.style.borderColor = null;
+     })
+ }
+ invalidStyle();
