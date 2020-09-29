@@ -39,7 +39,7 @@
                     </div>
                 </div>
 
-                <section class="search">
+                <div class="search">
                     <input type="search" class="searchTerm" placeholder="What are you looking for?">
                     <button type="submit" name="search" class="searchButton">
                         <!-- svg Created by juli from the Noun Project-->
@@ -50,10 +50,10 @@
                                 d="M87,81.3L69.1,63.4c9-11.7,8.1-28.6-2.7-39.3c-5.9-5.9-13.5-8.8-21.2-8.8s-15.3,2.9-21.2,8.8c-11.7,11.7-11.7,30.7,0,42.4  c5.9,5.9,13.5,8.8,21.2,8.8c6.4,0,12.8-2,18.1-6.1L81.3,87c0.8,0.8,1.8,1.2,2.9,1.2c1,0,2.1-0.4,2.9-1.2  C88.6,85.5,88.6,82.9,87,81.3z M45.3,67.2c-5.9,0-11.3-2.3-15.5-6.4c-8.5-8.5-8.5-22.4,0-31c4.1-4.1,9.6-6.4,15.5-6.4  s11.3,2.3,15.5,6.4s6.4,9.6,6.4,15.5c0,5.9-2.3,11.3-6.4,15.5S51.1,67.2,45.3,67.2z" />
                         </svg>
                     </button>
-                </section>
+                </div>
 
                 <div class="half">
-                    <section class="login">
+                    <div class="login">
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="40px"
                                 height="40px">
@@ -63,8 +63,8 @@
                             </svg>
                             <span class="tooltiptext-login">Log in</span>
                         </a>
-                    </section>
-                    <section class="cart">
+                    </div>
+                    <div class="cart">
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="40px"
                                 height="40px">
@@ -74,10 +74,10 @@
                             </svg>
                             <span class="tooltiptext-cart">Check shopping bag</span>
                         </a>
-                    </section>
+                    </div>
                 </div>
             </div>
-            <section>
+            <div>
                 <nav>
                     <ul id="js-menu" class="main-nav wide">
                         <li><a href="index.html">Home</a></li>
@@ -86,7 +86,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-            </section>
+            </div>
         </div>
     </header>
 
@@ -95,7 +95,9 @@
 
         <section class="intro">
             <div class="cover">
-                <h2 class="title"><a href="#products"> Get your fun t-&nbsp;shirt now!</h2></a>
+                <h2 class="title">
+                    <a href="#products"> Get your fun t-&nbsp;shirt now!</a>
+                </h2>
             </div>
         </section>
 
@@ -251,12 +253,12 @@
                 <label for="name">Name <abbr title="This field is mandatory" aria-label="required">*</abbr>
                     <input id="name" type="text" name="name" placeholder="Full name " required maxlength="90"><br>
                 </label>
-                <label for="email">Email <abbr title="This field is mandatory" aria-label="required">*</abbr>
-                    <input id="mail" type="email" name="email" placeholder="Your email adress " required
+                <label for="mail">Email <abbr title="This field is mandatory" aria-label="required">*</abbr>
+                    <input id="mail" type="email" name="mail" placeholder="Your email adress " required
                         maxlength="90"><br>
                 </label>
-                <label for="telephone">Telephone <abbr title="This field is mandatory" aria-label="required">*</abbr>
-                    <input id="tel" type="tel" name="telephone" pattern="[0]{1}[0-9]{2}[0-9]{3}[0-9]{4}"
+                <label for="tel">Telephone <abbr title="This field is mandatory" aria-label="required">*</abbr>
+                    <input id="tel" type="tel" name="tel" pattern="[0]{1}[0-9]{2}[0-9]{3}[0-9]{4}"
                         placeholder="Telephone number " required maxlength="90"><br>
                 </label>
                 <label for="message"> Message <abbr title="This field is mandatory" aria-label="required">*</abbr>
