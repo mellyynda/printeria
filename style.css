@@ -906,10 +906,10 @@ header a {
     color: var(--dark-txt);
     text-align: center;
     border-radius: 6px;
-    padding: 5px 0;
+    padding: 0;
     position: absolute;
-
     z-index: 1;
+    font-size: var(--txt-small);
 }
 
 .tooltiptext-cart {
