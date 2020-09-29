@@ -206,9 +206,11 @@
          })
      })
      text.addEventListener("input", function () {
-         if (!text.checkValidity()) {
-             text.style.borderColor = "red";
-         } else text.style.borderColor = "green";
+         if (text.value.trim()) {
+             if (!text.checkValidity()) {
+                 text.style.borderColor = "red";
+             } else text.style.borderColor = "green";
+         } else text.style.borderColor = null;
      })
  }
  invalidStyle();
