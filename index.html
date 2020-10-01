@@ -18,13 +18,15 @@
                 <div class="half">
                     <div class="hamburger">
                         <p id="js-navbar-toggle" class="menu-toggle" tabindex="1">
-                            <svg id='burger' xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 0 24 24"
-                                width="40px">
+                            <svg id='burger' xmlns="http://www.w3.org/2000/svg" aria-labelledby="menu" height="40px"
+                                viewBox="0 0 24 24" width="40px">
+                                <title id="menu">Menu</title>
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
                             </svg>
-                            <svg id="x" class="x-none" xmlns="http://www.w3.org/2000/svg" height="40px"
-                                viewBox="0 0 24 24" width="40px">
+                            <svg id="x" aria-labelledby="close" class="x-none" xmlns="http://www.w3.org/2000/svg"
+                                height="40px" viewBox="0 0 24 24" width="40px">
+                                <title id="close">Close</title>
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" />
@@ -42,9 +44,10 @@
                     <input type="search" class="searchTerm" placeholder="What are you looking for?">
                     <button type="submit" name="search" class="searchButton">
                         <!-- svg Created by juli from the Noun Project-->
-                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
-                            x="0px" y="0px" viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;"
-                            xml:space="preserve">
+                        <svg aria-labelledby="search-icon" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px"
+                            viewBox="0 0 100 125" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                            <title id="search-icon">search</title>
                             <path
                                 d="M87,81.3L69.1,63.4c9-11.7,8.1-28.6-2.7-39.3c-5.9-5.9-13.5-8.8-21.2-8.8s-15.3,2.9-21.2,8.8c-11.7,11.7-11.7,30.7,0,42.4  c5.9,5.9,13.5,8.8,21.2,8.8c6.4,0,12.8-2,18.1-6.1L81.3,87c0.8,0.8,1.8,1.2,2.9,1.2c1,0,2.1-0.4,2.9-1.2  C88.6,85.5,88.6,82.9,87,81.3z M45.3,67.2c-5.9,0-11.3-2.3-15.5-6.4c-8.5-8.5-8.5-22.4,0-31c4.1-4.1,9.6-6.4,15.5-6.4  s11.3,2.3,15.5,6.4s6.4,9.6,6.4,15.5c0,5.9-2.3,11.3-6.4,15.5S51.1,67.2,45.3,67.2z" />
                         </svg>
@@ -67,6 +70,7 @@
                         <a href="#">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="40px"
                                 height="40px">
+
                                 <path d="M0 0h24v24H0z" fill="none" />
                                 <path
                                     d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
@@ -153,6 +157,7 @@
                                 <a href="#" aria-label="add to cart">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"
                                         width="40px" height="40px">
+                                        <title>Add to shopping basket</title>
                                         <path d="M0 0h24v24H0z" fill="none" />
                                         <path
                                             d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z" />
