@@ -1492,16 +1492,16 @@ input[type="tel"]:hover,
     line-height: 0;
 }
 
-.social a img {
+.social a svg {
     border-radius: 10px;
     width: 30px;
     transition: all .2s linear;
     fill: var(--white-txt);
 }
 
-.social a img:hover,
-.social a img:active,
-.social a img:focus {
+.social a svg:hover,
+.social a svg:active,
+.social a svg:focus {
     position: relative;
     top: -2px;
 }
