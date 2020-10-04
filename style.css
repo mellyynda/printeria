@@ -902,10 +902,12 @@ header a {
 .tooltiptext-cart,
 .tooltiptext-login {
     visibility: hidden;
-    width: 120px;
+    width: 90px;
     background-color: rgba(255, 255, 255, 0.5);
     color: var(--dark-txt);
     text-align: center;
+    line-height: 1.2;
+    font-weight: bolder;
     border-radius: 6px;
     padding: 0;
     position: absolute;
@@ -914,13 +916,13 @@ header a {
 }
 
 .tooltiptext-cart {
-    left: -50px;
-    bottom: -70px;
+    left: -35px;
+    bottom: -45px;
 }
 
 .tooltiptext-login {
     left: -20px;
-    bottom: -30px;
+    bottom: -10px;
     width: 80px;
 }
 
