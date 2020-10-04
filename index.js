@@ -4,7 +4,7 @@
  }
 
 
- //  reload page on resize to avoid bad layout-doesn't work, kills my layout
+ //  reload page on resize to avoid bad layout => doesn't work, kills my layout
  //  window.addEventListener('resize', function () {
  //      "use strict";
  //      window.location.reload();
@@ -96,23 +96,32 @@
      dots[slideIndex - 1].className += " on-dot";
  }
 
+ //function that changes images with bigger versions of the same img based on device screen width //for better site speed
+ let optimizeImg = function () {
+     let newMemberDiscount = document.querySelector('body > main > section.offers.slideshow-container > figure:nth-child(1) > a > img');
+     console.log(newMemberDiscount);
+     if (window.innerWidth > 500) {
+
+     }
+ }
+ optimizeImg()
 
  //function that makes cover height as big as screen
  let makeCoverFull = function () {
      let nav = document.getElementsByTagName('header');
-     console.log(nav);
+     // console.log(nav);
      let navHeight = nav[0].offsetHeight;
-     console.log(navHeight);
+     //console.log(navHeight);
 
      let cover = document.querySelector('.cover');
-     console.log(cover);
+     // console.log(cover);
 
      // found this solution to change viewport height to pixels: https://stackoverflow.com/questions/44109314/javascript-calculate-with-viewport-width-height/44109531
      function vh(v) {
          var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
          return (v * h) / 100;
      }
-     console.log(vh(100));
+     //console.log(vh(100));
 
      cover.style.height = ` ${vh(100) - navHeight}px`
 
@@ -155,16 +164,16 @@
 
  //declaring form fields on a global scope
  let name = document.getElementById('name');
- console.log(name);
+ //console.log(name);
 
  let email = document.querySelector('#contact > form > label:nth-child(4) > input[type=email]');
- console.log(email);
+ // console.log(email);
 
  let tel = document.querySelector('#contact > form > label:nth-child(5) > input[type=tel]');
- console.log(tel);
+ //console.log(tel);
 
  let message = document.getElementById('message');
- console.log(message);
+ //console.log(message);
 
  let form = document.getElementById('contact-form');
 
@@ -186,16 +195,16 @@
      e.preventDefault();
 
      let parent = document.querySelector('.submit-response');
-     console.log(parent);
+     //console.log(parent);
 
      let tag = document.createElement('p');
-     console.log(tag);
+     //console.log(tag);
 
      let text = document.createTextNode(`*Thank you ${name.value} for your message. Your concerns are important for us. We will answer within 5 working days.`)
-     console.log(text);
+     // console.log(text);
 
      tag.appendChild(text);
-     console.log(tag);
+     //console.log(tag);
 
      parent.appendChild(tag);
 
@@ -210,7 +219,7 @@
  // creats red bottom border to inputs field if what you enter in not valid still need to make it go back to default when the form is deselected
  let invalidStyle = function () {
      let fields = document.querySelectorAll('.contact form input');
-     l(fields);
+     //l(fields);
      let text = document.querySelector('#message');
 
      fields.forEach(field => {

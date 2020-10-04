@@ -997,7 +997,7 @@ p {
     min-height: 500px;
     max-height: 800px;
     background-color: var(--yellow-bg);
-    background-image: url(img/fun-tshirt-800px.png);
+    background-image: url(img/mobile/fun-tshirt.png);
     background-position: center center;
     background-repeat: no-repeat;
     /* This is what makes the background image rescale based
@@ -1019,6 +1019,12 @@ p {
     align-self: flex-end;
     margin-bottom: 5%;
     text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+    .cover {
+        background-image: url(img/fun-tshirt-800px.png);
+    }
 }
 
 @media screen and (min-width: 1000px) {
