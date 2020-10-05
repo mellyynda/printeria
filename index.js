@@ -181,6 +181,7 @@ let message = document.getElementById('message');
 
 let form = document.getElementById('contact-form');
 
+
 //set all input elements equal to nothing
 let resetForm = function () {
     name.value = '';
@@ -220,10 +221,13 @@ form.addEventListener('submit', e => {
 
 
 
-// creats red bottom border to inputs field if what you enter in not valid still need to make it go back to default when the form is deselected
+// creats red bottom border to inputs field if what you enter in not valid
+/* could not change this to add and remove class, tried but couldn't make it work,
+i think it is because of the input event that is triggered on each letter typed which 
+would add the same class multiple times */
 let invalidStyle = function () {
     let fields = document.querySelectorAll('.contact form input');
-    //l(fields);
+
     let text = document.querySelector('#message');
 
     fields.forEach(field => {
@@ -232,6 +236,7 @@ let invalidStyle = function () {
             if (field.value.trim()) {
                 if (!field.checkValidity()) {
                     field.style.borderColor = "red";
+                    //field.classList.add('invalid');
                 } else field.style.borderColor = "green";
             } else field.style.borderColor = null;
         })

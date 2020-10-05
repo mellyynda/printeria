@@ -1409,7 +1409,7 @@ input[type="tel"]:hover,
 .contact form button:focus,
 .contact form button:active,
 .contact form button:hover {
-    background-color: var(--white-txt);
+    background-color: var(--white-bg);
 }
 
 /* form subbmision response section
@@ -1421,6 +1421,16 @@ input[type="tel"]:hover,
     color: var(--dark-txt);
 }
 
+/* form valid and invalid styling-not used
+  ==============================================================================
+*/
+.invalid {
+    border-color: red;
+}
+
+.valid {
+    border-color: green;
+}
 
 
 /*
