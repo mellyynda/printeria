@@ -5,9 +5,10 @@
 //  });
 
 
-//changes toggle from x to hamburger and back
+//Navigation bar effects
 
 let mainNav = document.getElementById('js-menu');
+let holeNav = document.querySelector('body > header');
 
 function menuButtonEffects() {
     let navBarToggle = document.getElementById('js-navbar-toggle');
@@ -27,28 +28,56 @@ function menuButtonEffects() {
         });
     };
 
+    function toggleBurger() {
+        hamburger.style.display = 'block';
+        x.style.display = 'none';
+    }
+
+    function toggleX() {
+        hamburger.style.display = 'none';
+        x.style.display = 'block';
+    }
+
     navBarToggle.addEventListener('click', function () {
         clickCount++;
         if (clickCount % 2 == 0) {
-            hamburger.style.display = 'block';
-            x.style.display = 'none';
+            toggleBurger();
         } else {
-            hamburger.style.display = 'none';
-            x.style.display = 'block';
+            toggleX();
         }
     });
+
+    let navLinks = document.querySelectorAll('.main-nav>li>a');
+    // console.log(navLinks);
+
+    function closeNav(){
+        mainNav.classList.remove('active');
+        clickCount++;
+        toggleBurger();
+    };
+
+    navLinks.forEach(navLink => {
+        navLink.addEventListener("click", e =>{
+            // console.log(navLink.innerText);
+            closeNav();
+        })
+    })
+    // close navbar on scroll
+    window.addEventListener('scroll', function(){ closeNav() });
 };
+
+
 
 // opens main nav
 function openMobileNav() {
 
     let navBarToggle = document.getElementById('js-navbar-toggle');
-
     navBarToggle.addEventListener('click', function () {
-
         mainNav.classList.toggle('active');
     });
 };
+
+
 
 menuButtonEffects();
 openMobileNav();
