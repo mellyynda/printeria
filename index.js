@@ -28,7 +28,7 @@ window.addEventListener('load', e => {
     // console.log(e);
     setTimeout(function () {
         popupAppear();
-    }, 3000);
+    }, 2000);
 })
 }
 
