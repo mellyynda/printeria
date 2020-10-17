@@ -62,6 +62,7 @@ function menuButtonEffects() {
             closeNav();
         })
     })
+    
     // close navbar on scroll
     window.addEventListener('scroll', function(){ closeNav() });
 };
