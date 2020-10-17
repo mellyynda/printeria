@@ -684,6 +684,44 @@ main,
     width: 95%;
 }
 
+/* Popup components
+  ==============================================================================
+  */
+.popup-wrapper {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(40, 102, 113, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.popup {
+    width: 90%;
+    max-width: 500px;
+    background-color: var(--white-bg);
+    padding-bottom: 50px;
+}
+
+.close {
+    display: inline;
+    padding: 15px;
+    font-size: var(--subtitle-size);
+    cursor: pointer;
+}
+
+.popup-content {
+    text-align: center;
+    padding: var(--box-padding);
+}
+
+.popup-appear {
+    display: flex;
+}
+
 
 
 /*

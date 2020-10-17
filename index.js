@@ -5,6 +5,35 @@
 //  });
 
 
+//Popup 
+function myPopup () {
+    let popup = document.querySelector('.popup-wrapper');
+    // console.log(popup)
+
+    let popupAppear = () => {
+    // console.log("in popup");
+    popup.classList.add('popup-appear');
+}
+
+let closePopup = () => {
+    let closeBtn = document.querySelector('.close');
+    // console.log(closeBtn);
+    closeBtn.onclick = () => {
+        popup.classList.remove('popup-appear');
+    }
+}
+closePopup();
+
+window.addEventListener('load', e => {
+    // console.log(e);
+    setTimeout(function () {
+        popupAppear();
+    }, 3000);
+})
+}
+
+myPopup();
+
 //Navigation bar effects
 
 let mainNav = document.getElementById('js-menu');
